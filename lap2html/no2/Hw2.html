@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เเบบฟอร์มจองทัวร์</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    <h1>เเบบฟอร์มจองทัวร์</h1>
+    <fieldset>
+    <legend>ข้อมูลทั่วไป:</legend>
+    
+    <p>ชื่อ-สกุล:</p><input type=“text” name=“firstname” id=”firstname” placeholder="กรอกชื่อ-สกุล"  required>*
+    <p>Email:</p><input type="email"name="email" required>*
+    <p>โทรศัพท์:</p><input type="tel" id="phone" name="phone" value="+66"
+    pattern="+66[0-9]{1}-[0-9]{3}-[0-9]{4}"
+    required>*
+    <p>ที่อยู่</p> <input type="text" name="ที่อยู่">
+    <p>รหัสไปรษณีย์: <input type="text" name="รหัสไปรษณีย์" size="4">
+    <p>รูปผู้จอง: <input type="file" name="file">
+    </fieldset>
+    <fieldset>
+    <legend>ข้อมูลเข้าสู่ระบบ:</legend>
+    <p>Username:</p><input type="text" name="username" pattern="[A-Za-z0-9_]{8,}" >
+     <br>
+    <i>ประกอบด้วยตัวเลข ตัวอักษรหรือ_ตั้งเเต่8ตัวขึ้นไป</i>
+    <p>Password:</p><input type="password" name="password"pattern="{8,}"  >
+    <br>
+    <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+    </fieldset>
+    <fieldset>
+    <legend>ข้อมูลทัวร์ที่ต้องการ:</legend>
+    <p>เเพคเก็จทัวร์:<select name="dept">
+        <option value="">--select--</option>
+        <option value="Korea">Korea</option>
+        <option value="Japan">Japan</option>
+        <option value="America">America</option>
+        <option value="laos">laos</option>
+        <option value="Australia">Australia</option>
+       
+        </select>
+    <p>วันที่เดินทาง:<input type="date">
+    <p>จำนวนผู้เดินทาง:<input type="number"  name="จำนวนผู้เดินทาง"
+    min="1" max="10">
+    <br>
+    <label>:เน้นการท่องเที่ยวเเบบใด?
+        <br>
+        <input type="checkbox" name="vehicle1" value="ช้อปปิ้ง" checked="checked" >ช้อปปิ้ง
+        <br>
+        <input type="checkbox" name="vehicle2" value="ธรรมชาติ">ธรรมชาติ
+        <br>
+        <input type="checkbox" name="vehicle3" value="ทะเล">ทะเล
+        </label>
+       </fieldset>
+       <p>ยอมรับเงื่่อนไขเเละข้อตกลง
+       <input type="radio" name="agree" value="agree">I agree
+       <input type="radio" name="agree" value="disagree"> I disagree
+       <input type="submit" value="จอง">
+
+    </form>
+
+
+
+</body>
+</html>
