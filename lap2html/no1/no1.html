@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    <p> 1. ชื่อเต็ม/ชื่อย่อของสาขาวิชา : 
+        <select name="dept">
+            <option value="">---please choose an option</option>
+            <option value="SIT">SIT หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชานวัตกรรมและเทคโนโลยีความมั่นคง</option>
+            <option value="IC">IC หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาเคมีอุสาหกรรม</option>
+            <option value="MMI">MMI หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาอุปกรณ์การแพทย์</option>
+            <option value="IMI">IMI หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาฟิสิกส์อุสาหกรรมและอุปกรณ์การแพทย์</option>
+            <option value="BT">BT หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาเทคโนโลยีชีวภาพ</option>
+            <option value="MA">MA หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาคณิตศาตร์ประยุกต์</option>
+            <option value="MC">MC หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาคณิตศาตร์ประยุกต์เชิงวิทยาการคอมพิวเตอร์</option>
+            <option value="CS">CS หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาวิทยาการคอมพิวเตอร์</option>
+            <option value="AT">AT หลักสูตรวิทยาศาตร์คณะบัณทิต สาขาวิชาอุสาหกรรมการเกษตร</option>
+        </select>
+    </p>
+    <p>2. จำนวนเงินที่จะโอน :
+        <input type="number" pattern="[^-]">
+    </p>
+    <p>3 อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย :
+        1<input type="text"> 
+        2<input type="text">
+        3<input type="text">
+        4<input type="text">
+        5<input type="text">
+    </p>
+    <p> 4 ค่าไฟฟ้า 3 เดือนที่ผ่านมา :
+        <input type="number" pattern="[^-]">
+    </p>
+    <p>5 รหัสบัตรประชาชน :
+        <input type="number" pattern="[0-9]{13}">
+    </p>
+    <p> 6 ความพึงพอใจของหนังสือเล่มนี้ :
+        <input type="radio" id="ดีมาก" name="fav_language" value="ดีมาก">
+        <label for="ดีมาก">ดีมาก</label>
+        <input type="radio" id="ปานกลาง" name="fav_language" value="ปานกลาง">
+        <label for="ปานกลาง">ปานกลาง</label>
+        <input type="radio" id="แย่" name="fav_language" value="แย่">
+        <label for="แย่">แย่</label>
+    </p>
+    <p> 7 อาการป่วย :
+        <input type="text">
+    </p>
+    <p> 8 ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :
+        <input type="radio" id="ได้รับ" name="fav_language" value="ได้รับ">
+        <label for="ได้รับ">ได้รับ</label>
+        <input type="radio" id="ไม่ได้รับ" name="fav_language" value="ไม่ได้รับ">
+        <label for="ไม่ได้รับ">ไม่ได้รับ</label>
+    </p>
+    <p> 9 รหัสผ่าน
+        <input type="password">
+    </p>
+    <p> 10 เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน :
+        เวลาเข้าเรียน <input type="time">
+        เวลาสิ้นสุดการเรียน <input type="time">
+    </p>
+    <p> 11 วันเวลาที่ต้องไปพบแพทย์ :
+        <input type="date">
+        <input type="time">
+    </p>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
