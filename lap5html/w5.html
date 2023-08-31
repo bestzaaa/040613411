@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" UTF-8">
+
+<script>
+    function add() {
+    var table = document.getElementById("tb");
+    var songName = textInput.value;
+    var li = document.createElement("li");
+    li.innerHTML = songName;
+    var ul = document.getElementById("playlist");
+    ul.appendChild(li);
+}
+    
+
+
+
+    
+
+
+
+
+</script>
+</head>
+
+
+<body>
+    ชื่อลูกค้า : <input type = "text" id ="name"><br>
+    ที่อยู่ : <input type = "text" id ="address"><br>
+    โทรศัพท์ : <input type = "text" id ="phone"><br>
+    <input type="button" id="addButton" value="เพิ่ม" onclick="add()"><br><br>
+
+<table border="1" id="tb">
+<th> ชื่อลูกค้า</th>
+<th> ที่อยู่</th>
+<th>โทรศัพท์</th>
+</table>
+
+
+
+</body>
+</html>
+
+
