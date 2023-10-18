@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        let http;
+        function send(){
+            http = new XMLHttpRequest();
+            http.onreadystatechange = show;
+            let keyword = document.getElementById("keyword").value;
+            let url = "conn.php?username="+keyword;
+            http.open("GET",url);
+            http.send();
+        }
+        function show(){
+            if(http.readyState==4 && http.status==200){
+                document.getElementById("showelement").innerHTML = http.responseText;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="keyword" onblur="send()">
+    <div id="showelement"></div>
+</body>
+</html>
